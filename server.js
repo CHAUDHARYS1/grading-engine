@@ -27,7 +27,7 @@ const attendanceRoutes = require('./routes/attendanceRoutes');
 app.use('/api/users', userRoutes);
 app.use('/api/students', studentRoutes);
 app.use('/api/grades', gradeRoutes);
-app.use('/api/attendance', attendanceRoutes);
+app.use('/api/attendances', attendanceRoutes);
 
 // Start the server
 app.listen(PORT, () => {
