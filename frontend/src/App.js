@@ -1,0 +1,1 @@
+// Root component that holds the main structure of your React app.
