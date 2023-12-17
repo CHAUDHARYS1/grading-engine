@@ -11,6 +11,13 @@ router.get('/', gradeController.getAllGrades);
 // Get grade by ID
 router.get('/:id', gradeController.getGradeById);
 
-// Add other routes as needed
+// Create a new grade
+router.post('/', gradeController.createGrade);
+
+// Update grade by ID
+router.put('/:id', gradeController.updateGradeById);
+
+// Delete grade by ID
+router.delete('/:id', gradeController.deleteGradeById);
 
 module.exports = router;
