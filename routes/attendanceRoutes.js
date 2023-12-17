@@ -11,6 +11,15 @@ router.get('/', attendanceController.getAllAttendance);
 // Get attendance record by ID
 router.get('/:id', attendanceController.getAttendanceById);
 
+// Create a new attendance record
+router.post('/', attendanceController.createAttendance);
+
+// Update attendance record by ID
+router.put('/:id', attendanceController.updateAttendanceById);
+
+// Delete attendance record by ID
+router.delete('/:id', attendanceController.deleteAttendanceById);
+
 // Add other routes as needed
 
 module.exports = router;
