@@ -34,6 +34,10 @@ exports.createUser = async (req, res) => {
   try {
     const newUser = new User({ username, password, role });
     await newUser.save();
+
+    // Add validation for new username and password
+  
+
     res.status(201).json(newUser);
   } catch (error) {
     console.error(error);
