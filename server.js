@@ -1,23 +1,29 @@
 // Entry point to start your server.
-
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+require('./config/passport');
 
 const app = express();
 const PORT = process.env.PORT || 3000; 
+
+// Initialize Passport
+app.use(passport.initialize());
+
 
 //Connect to MongoDB
 
 mongoose.connect('mongodb://localhost:27017/grading-engine', {
     // deprecation warnings below
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 });
 
 
 //middleware
 app.use(bodyParser.json());
+
 
 //import routes
 const userRoutes = require('./routes/userRoutes');
